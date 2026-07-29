@@ -17,11 +17,16 @@ persist, because `localStorage` is blocked on `file://`.
 
 | File | What's in it |
 |---|---|
-| `index.html` | All the content and the inline SVG job-site photos |
-| `styles.css` | The whole design system |
+| `index.html` | The main site, and the inline SVG job-site photos |
+| `styles.css` | The main site's design system |
+| `ledger.html` | `/ledger` — a fictitious 1986 newspaper front page and its classifieds |
+| `ledger.css` | The newspaper's design system, deliberately sharing nothing with the main site |
 | `observe.js` | Visitor counter, and the work-order form's `mailto:` handler |
-| `assets/` | Terry, cropped three ways |
+| `assets/` | Terry, cropped four ways |
 | `vercel.json` | Clean URLs and asset caching |
+
+The two pages are meant to look like they come from different worlds — signage versus
+newsprint. Don't unify their stylesheets; the contrast is the joke.
 
 ## Things you'll probably want to change
 

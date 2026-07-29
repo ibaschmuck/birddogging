@@ -871,6 +871,71 @@ a { color: var(--navy); }
   line-height: 1.05;
 }
 
+/* A clipping pinned to the page — deliberately a different world from the rest
+   of this site, because that is what a newspaper is. */
+.presslink {
+  display: block;
+  max-width: 430px;
+  margin: 26px 0 0;
+  padding: 14px 18px 16px;
+  background: #EDE7D8;
+  border: 1px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(0,0,0,.18);
+  text-decoration: none;
+  transform: rotate(-1.2deg);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.presslink:hover {
+  transform: rotate(0deg);
+  box-shadow: 6px 6px 0 rgba(0,0,0,.22);
+}
+.presslink__lab {
+  display: block;
+  font-family: var(--ui);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #8A1F1F;
+}
+.presslink__name {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #14120E;
+  border-bottom: 1px solid #14120E;
+  padding-bottom: 6px;
+  margin-bottom: 7px;
+}
+.presslink__hed {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.25;
+  color: #14120E;
+}
+.presslink__cta {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--ui);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #3E3930;
+}
+
+.foot__link {
+  color: var(--amber);
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,194,14,.5);
+}
+
 /* ---------- reviews ---------- */
 
 .revs {
