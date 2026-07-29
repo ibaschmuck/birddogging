@@ -211,6 +211,43 @@ a { color: var(--navy); }
   font-style: italic;
 }
 
+/* ---------- nav ---------- */
+
+.nav {
+  background: var(--navy);
+  border-top: 3px solid var(--amber);
+}
+.nav__in {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0;
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  font-family: var(--ui);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #CFE0F5;
+  border-right: 1px solid rgba(255,255,255,.14);
+}
+.nav a:first-child { border-left: 1px solid rgba(255,255,255,.14); }
+.nav a:hover { background: var(--navy-3); color: var(--paper); }
+
+/* The newspaper is the one thing here that is not on this page. */
+.nav__news {
+  margin-left: auto;
+  background: var(--amber);
+  color: var(--navy) !important;
+  border-right: 0;
+}
+.nav__news:hover { background: #FFD34D; }
+
 /* ---------- hero ---------- */
 
 .hero {
@@ -1271,6 +1308,10 @@ a { color: var(--navy); }
   .head__in { justify-content: center; text-align: center; }
   .head__call { text-align: center; width: 100%; }
   .brand { justify-content: center; }
+
+  .nav__in { justify-content: center; }
+  .nav a { flex: 1 1 auto; justify-content: center; padding: 11px 12px; font-size: 11px; }
+  .nav__news { margin-left: 0; flex-basis: 100%; }
 
   .gallery,
   .revs,
