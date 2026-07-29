@@ -42,9 +42,14 @@ it if you swap the photo.
 
 ## Deploy
 
+Hosted on Vercel, connected to `ibaschmuck/birddogging` on GitHub. Every push to `main`
+redeploys automatically — no build step runs, Vercel just serves these files.
+
 ```bash
 cd ~/birddogging
-npx vercel --prod
+# edit, then:
+git add -A && git commit -m "..." && git push
 ```
 
-Needs `npx vercel login` once first — that step is interactive.
+Vercel project settings, if it ever needs re-creating: **Framework Preset = Other**, no build
+command, no install command, output directory = repo root.

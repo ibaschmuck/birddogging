@@ -668,9 +668,39 @@ a { color: var(--navy); }
 .trade__list li { margin-bottom: 10px; font-size: 13.5px; line-height: 1.58; }
 .trade__list li::marker { color: var(--amber-2); }
 
-.trade--note { background: var(--grey); }
-.trade--note .trade__h { background: var(--red); }
 .trade__p { margin: 0; padding: 16px 18px 20px; font-size: 13.5px; }
+
+/* Painting is the flagship standard, so it gets the width to prove it. */
+.trade--wide { grid-column: span 2; }
+.trade--full { grid-column: 1 / -1; }
+
+.trade--lead { border-width: 4px; box-shadow: 0 8px 0 var(--amber); }
+.trade--lead .trade__h { font-size: 25px; }
+
+.trade__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 26px;
+  padding: 6px 18px 18px;
+}
+.trade__cols .trade__list { padding: 0 0 4px 18px; }
+
+.trade__sub {
+  margin: 14px 0 6px;
+  font-family: var(--ui);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.trade__list em { font-style: normal; text-decoration: underline; text-underline-offset: 2px; }
+.trade__list strong { color: var(--navy); }
+
+.trade--conduct { background: var(--grey); }
+.trade--conduct .trade__h { background: var(--red); }
+.trade__list--two { columns: 2; column-gap: 34px; padding-right: 24px; }
+.trade__list--two li { break-inside: avoid; }
 
 /* ---------- pricing ---------- */
 
@@ -1166,6 +1196,7 @@ a { color: var(--navy); }
   .hero__art { max-width: 420px; margin: 0 auto; }
   .terry__art { display: flex; justify-content: center; }
   .trades { grid-template-columns: repeat(2, 1fr); }
+  .trade__list--two { columns: 2; }
   .badges { grid-template-columns: repeat(2, 1fr); }
   .foot__in { grid-template-columns: 1fr 1fr; }
 }
@@ -1179,6 +1210,12 @@ a { color: var(--navy); }
   .gallery,
   .revs,
   .trades { grid-template-columns: 1fr; }
+
+  /* Nothing may span more columns than exist. */
+  .trade--wide,
+  .trade--full { grid-column: auto; }
+  .trade__cols { grid-template-columns: 1fr; padding-bottom: 8px; }
+  .trade__list--two { columns: 1; padding-right: 0; }
 
   .stats__in { grid-template-columns: repeat(2, 1fr); gap: 20px 10px; }
   .stat:nth-child(3) { border-left: none; }
